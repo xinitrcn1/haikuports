@@ -109,6 +109,7 @@ BUILD()
 
 	# Let mesa choose backend drivers and stuff
 	meson build \
+        -Dvulkan-drivers=swrast -Dgallium-drivers=softpipe \
 		-Dvulkan-icd-dir=$addOnsDir/vulkan/icd.d \
 		--buildtype=debugoptimized \
 		--prefix=$prefix \
